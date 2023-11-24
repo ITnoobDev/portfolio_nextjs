@@ -1,0 +1,23 @@
+.section {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item img {
+    margin: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.item img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}

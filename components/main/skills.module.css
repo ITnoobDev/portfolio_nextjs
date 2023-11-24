@@ -1,0 +1,78 @@
+.section {
+    width: 100%;
+    height: auto;
+    background-color: #ffff;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    padding: 150px 0;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.left h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+    padding: 20px 0;
+}
+
+.left p {
+    color: #767676;
+}
+
+.right {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.progress {
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.item span {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    font-weight: 500;
+    margin: 0 0 5px;
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.05);
+    height: 4px;
+    min-width: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.bar {
+    height: 100%;
+    width: 100%;
+}
+
+.line {
+    background: #000;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 680px) {
+    .left,
+    .right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

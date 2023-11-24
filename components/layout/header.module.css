@@ -1,0 +1,150 @@
+.header {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+    background-color: transparent;
+}
+.header__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    clear: both;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.header.down {
+    top: 0;
+    background: #a33;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.logo span {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    margin: 0 25px 0 0;
+    transition: all 0.3s ease;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: auto;
+    right: 0;
+    bottom: -2px;
+    background-color: #fff;
+    height: 3px;
+    transition: all 0.3s;
+}
+
+.link:hover::before {
+    width: 100%;
+    right: auto;
+    left: 0;
+}
+
+.activeNav::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: auto;
+    right: 0;
+    bottom: -2px;
+    background-color: #fff;
+    height: 3px;
+}
+
+/*============================MobileMenu===============================*/
+
+.menuBtn {
+    display: none;
+    z-index: 10;
+}
+
+.menuBtn:hover {
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.bar1.change {
+    transform: translate(0, 10px) rotate(-45deg);
+}
+
+.bar2.change {
+    opacity: 0;
+}
+
+.bar3.change {
+    transform: translate(0, -8px) rotate(45deg);
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.mobileMenu.active {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background: #a33;
+}
+
+.mobileLink {
+    font-weight: 500;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 680px) {
+    .menu {
+        display: none;
+    }
+    .menuBtn {
+        display: block;
+    }
+}
